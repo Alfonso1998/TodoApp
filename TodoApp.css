@@ -1,0 +1,301 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+
+body{
+    height: 100vh;
+    width:100%;
+    transition: all 0.4s;
+    background-color: hsl(236, 33%, 92%) ;
+}
+
+
+header{
+   background-image: url(./images/bg-desktop-light.jpg);
+   width: 100%;
+   height: 300px;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+
+}
+
+div.titolo{
+   
+    margin: 0 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 70px 0 46px 0;
+}
+
+div.titolo h1{
+   
+     font-family: 'Josefin Sans', sans-serif;
+     text-transform: uppercase;
+    font-size: 32px;
+    letter-spacing: 6px;
+    color: hsl(0, 0%, 98%);
+}
+div.titolo img.Moon{
+    cursor:pointer;
+    position: absolute;
+    right: 29%;
+    transition: 0.5s;
+}
+
+div.titolo img.Sun{
+    position: absolute;
+    right: 29%;
+    transition: 0.5s;
+    transform: rotateY(-90deg);
+    opacity: 0;
+    
+}
+img.Luna{
+    opacity: 0;
+    transform: rotateY(-90deg);
+    transition: 0.5s;
+}
+img.Sole{
+    position: absolute;
+    right: 29%;
+    transition: 0.5s;
+    cursor:pointer;
+    
+  
+}
+
+div.input{
+    
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+input.cerca{
+    width:40%;
+    height: 60px;
+    padding: 0 30px;
+    text-decoration: none;
+    border:none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:18px;
+    border-radius: 4px;
+    outline:none;
+    
+}
+
+ul.listatodo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top:30px;
+}
+
+ul.listatodo li{
+    list-style: none;
+    width:40%;
+    text-align: center;
+    height:60px;
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: hsl(235, 19%, 35%);
+    
+    
+}
+
+ input[type='checkbox']{
+    margin: 0 20px;
+    width:30px;
+    height:30px;
+    border: 1px solid lightgrey;
+    border-radius:50%;
+    font-size:18px;
+    appearance: none;  
+    display:flex;
+    align-items: center;
+    justify-content: center; 
+}
+input[type='checkbox']::after{
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 15px;
+    display:none;
+    
+}
+ input[type="checkbox"]:checked{
+    color:white;
+    background: linear-gradient(hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+}
+input[type="checkbox"]:checked:after{
+    display:block;
+}
+
+
+
+li p{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:18px;
+    
+}
+ul.obj{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top:10px;
+    
+    
+    
+}
+li.items{
+   list-style: none;
+    width: 40%;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    font-family: 'Josefin Sans';
+    border-top: 1px solid lightgrey;
+    padding: 15px 0;
+    margin-top: -10px;
+    text-transform: capitalize;
+    color: hsl(236, 9%, 61%);
+    
+}
+
+
+
+
+li.items ul.items{
+    display: flex;
+
+
+}
+ul.items li{
+    border:none;
+    margin-left: 10px;
+    list-style: none;
+
+}
+ul.obj a{
+    text-decoration: none;
+ color: hsl(236, 9%, 61%); 
+ margin-left: 10px;
+ font-weight: 900;
+ transition: all 0.3s;
+}
+ul.obj a:hover{
+    color:hsl(235, 19%, 35%) ;
+    transition: all 0.3s;
+}
+ul.obj a:focus{
+    color:hsl(235, 19%, 35%) ;
+}
+/*- Very Light Gray: hsl(0, 0%, 98%)
+- Very Light Grayish Blue: hsl(236, 33%, 92%)
+- Light Grayish Blue: hsl(233, 11%, 84%)
+- Dark Grayish Blue: hsl(236, 9%, 61%)
+- Very Dark Grayish Blue: hsl(235, 19%, 35%)*/
+
+
+
+@media screen and (max-width:1028px){
+    input.cerca{
+        width: 50%;
+    }
+    div.titolo{
+        margin: 0 25%;
+    }
+    div.titolo img.Moon,
+    div.titolo img.Sole{
+        right: 24%;
+    }
+    ul.listatodo li{
+        width: 50%;
+    }
+    
+    li.items{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:760px){
+    input.cerca{
+        width: 70%;
+    }
+    div.titolo{
+        margin: 0 15%;
+    }
+    div.titolo img.Moon,
+    div.titolo img.Sole{
+        right: 14%;
+    }
+    ul.listatodo li{
+        width: 70%;
+    }
+    
+    li.items{
+        width: 70%;
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width:480px){
+    header{
+        background-image: url(./images/bg-mobile-light.jpg);
+    }
+    input.cerca{
+        width: 90%;
+    }
+    div.titolo{
+        margin: 0 5%;
+    }
+    div.titolo img.Moon,
+    div.titolo img.Sole{
+        right: 4%;
+    }
+    ul.listatodo li{
+        width: 90%;
+    }
+    
+    li.items{
+        width: 90%;
+        font-size: 12px;
+    }
+    li.items ul.items {
+      display: flex;
+      position: absolute;
+      width: 90%;
+      background:white;
+      padding: 20px;
+      top:90px;
+      justify-content: center;
+      border-radius: 10px;
+    
+    }
+    ul.items a{
+        padding: 0 10px;
+        margin: 0;
+    }
+    ul.obj{
+        position: relative;
+    }
+    ul.obj a{
+        font-size: 16px;
+    }
+    span{
+        font-size: 20px;
+    }
+   
+}
