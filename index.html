@@ -3,34 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="TodoApp.css">
+  <link rel="stylesheet" href="TodoAppDark.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="./fontawesome-free-6.0.0-web/css/all.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&family=Josefin+Sans:wght@300;400;700&family=Roboto:wght@500&display=swap"
+      rel="stylesheet">
   <title>Frontend Mentor | Todo app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  
+  <!--Inizio dell'app-->
 
-  Todo
+  <header>
+      <div class="titolo">
+          <h1>todo</h1>
+          <img id="Moon"class="Moon" src="images/icon-moon.svg" alt="Moon-NotFound">
+          <img id="Sun" class="Sun" src="images/icon-sun.svg" alt="Sun-NotFound">
+      </div>
 
-  <!-- Add dynamic number --> items left
+      <!--Campo input-->
 
-  All
-  Active 
-  Completed
+      <div class="input">
+          <input class="cerca" id="cerca" type="search" placeholder="Create a new Todo...">
+      </div>
 
-  Clear Completed
+      <ul class="listatodo" id="listaTodo">
+         
+      </ul>
+        <!--Lista degli obbiettivi-->
+      <ul class="obj">
+            <li class="items">
+              <span id="nTodo"> 0 items</span>
+              <ul class="items">
+                  <li><a href="#" id="tutti">all</a></li>
+                  <li><a href="#" id="attivi">active</a></li>
+                  <li><a href="#" id="completati">completed</a></li>
+              </ul>
+              <a href="#" id="clean">clear completed</a>
+          </li>
+      </ul>
+      
+  </header>
 
-  Drag and drop to reorder list
+  
 
+
+</body>
+<script src="TodoApp.js"></script>
+
+</html>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Alfonso Mandato</a>.
   </div>
-</body>
-</html>
