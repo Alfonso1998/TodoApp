@@ -124,7 +124,7 @@ ul.listatodo li{
     justify-content: center; 
 }
 input[type='checkbox']::after{
-    content: "\f00c";
+    content: "f00c";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 15px;
