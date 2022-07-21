@@ -124,10 +124,9 @@ ul.listatodo li{
     justify-content: center; 
 }
 input[type='checkbox']::after{
-    content: "f00c";
-    font-family: "Font Awesome 5 Free";
+    content: url(images/icon-check.svg);
     font-weight: 900;
-    font-size: 15px;
+    font-size: 13px;
     display:none;
     
 }
